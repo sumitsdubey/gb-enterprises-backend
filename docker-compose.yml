@@ -1,0 +1,17 @@
+services:
+  crm-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gb-crm-backend
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-8088}:${PORT:-8088}"
+    volumes:
+      - crm_uploads:/app/uploads
+
+volumes:
+  crm_uploads:
+    driver: local

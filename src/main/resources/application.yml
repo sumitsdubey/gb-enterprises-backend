@@ -41,6 +41,7 @@ app:
     dir: ${UPLOAD_DIR:uploads}
 
   frontend-url: ${FRONTEND_URL:http://localhost:3000}
+  backend-url: https://gb-enterprises-backend.onrender.com
 
 server:
   port: ${PORT:8088}
